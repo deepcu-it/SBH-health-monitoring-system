@@ -264,7 +264,7 @@ class _HistoryPageState extends State<HistoryPage> {
                                     ),
                                     _buildDetailRow(
                                       'Temperature',
-                                      '${data.temperature}°C',
+                                      '${data.temperature.toStringAsFixed(2)}°C',
                                       color: Colors.orange,
                                     ),
                                     _buildDetailRow(
@@ -349,7 +349,7 @@ class _HistoryPageState extends State<HistoryPage> {
                                     ),
                                     _buildMetricColumn(
                                       'Temperature',
-                                      '${data.temperature}',
+                                      '${data.temperature.toStringAsFixed(2)}',
                                       '°C',
                                       Colors.orange,
                                     ),
