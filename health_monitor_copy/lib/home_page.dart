@@ -316,55 +316,52 @@ class _HomePageState extends State<HomePage> {
       ),
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
           child: Column(
             children: [
               if (isLoading)
-                const Center(child: CircularProgressIndicator())
+                const Expanded(
+                  child: Center(child: CircularProgressIndicator()),
+                )
               else
                 Expanded(
                   child: Column(
                     children: [
                       Expanded(
-                        child: Padding(
+                        child: GridView.count(
+                          crossAxisCount: 2,
+                          mainAxisSpacing: 12,
+                          crossAxisSpacing: 12,
+                          childAspectRatio: 1.0,
                           padding: const EdgeInsets.symmetric(vertical: 8.0),
-                          child: GridView.count(
-                            crossAxisCount: 2,
-                            mainAxisSpacing: 8,
-                            crossAxisSpacing: 8,
-                            childAspectRatio: 1.1,
-                            shrinkWrap: true,
-                            physics: const NeverScrollableScrollPhysics(),
-                            children: [
-                              HealthCard(
-                                title: 'heart_rate',
-                                value:
-                                    '${healthData['temperature'].toStringAsFixed(1)}',
-                                unit: 'BPM',
-                                icon: Icons.favorite,
-                                color: hasError ? Colors.grey : Colors.orange,
-                              ),
-                              HealthCard(
-                                title: 'SpO2',
-                                value:
-                                    '${healthData['spo2'].toStringAsFixed(1)}',
-                                unit: '%',
-                                icon: Icons.bloodtype,
-                                color: hasError ? Colors.grey : Colors.blue,
-                              ),
-                              HealthCard(
-                                title: 'Temperature',
-                                value:
-                                    '${healthData['heart_rate'].toStringAsFixed(1)}',
-                                unit: '°C',
-                                icon: Icons.thermostat,
-                                color: hasError ? Colors.grey : Colors.red,
-                              ),
-                            ],
-                          ),
+                          children: [
+                            HealthCard(
+                              title: 'Heart Rate',
+                              value:
+                                  '${healthData['heart_rate'].toStringAsFixed(1)}',
+                              unit: 'BPM',
+                              icon: Icons.favorite,
+                              color: hasError ? Colors.grey : Colors.red,
+                            ),
+                            HealthCard(
+                              title: 'SpO2',
+                              value: '${healthData['spo2'].toStringAsFixed(1)}',
+                              unit: '%',
+                              icon: Icons.bloodtype,
+                              color: hasError ? Colors.grey : Colors.blue,
+                            ),
+                            HealthCard(
+                              title: 'Temperature',
+                              value:
+                                  '${healthData['temperature'].toStringAsFixed(1)}',
+                              unit: '°C',
+                              icon: Icons.thermostat,
+                              color: hasError ? Colors.grey : Colors.orange,
+                            ),
+                          ],
                         ),
                       ),
-                      const SizedBox(height: 8),
+                      const SizedBox(height: 16),
                       ElevatedButton.icon(
                         onPressed: isLoading
                             ? null
@@ -374,72 +371,76 @@ class _HomePageState extends State<HomePage> {
                         style: ElevatedButton.styleFrom(
                           padding: const EdgeInsets.symmetric(
                             horizontal: 24,
-                            vertical: 12,
+                            vertical: 16,
                           ),
                           backgroundColor:
                               hasAnomaly ? Colors.orange : Colors.blue,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12),
+                          ),
                         ),
                       ),
                     ],
                   ),
                 ),
-              Flexible(
-                child: Container(
-                  padding: const EdgeInsets.all(12.0),
-                  margin: const EdgeInsets.only(bottom: 8.0),
-                  decoration: BoxDecoration(
+              const SizedBox(height: 16),
+              Container(
+                padding: const EdgeInsets.all(16.0),
+                decoration: BoxDecoration(
+                  color: hasError
+                      ? Colors.red.withOpacity(0.1)
+                      : hasAnomaly
+                          ? Colors.orange.withOpacity(0.1)
+                          : Colors.green.withOpacity(0.1),
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(
                     color: hasError
-                        ? Colors.red.withOpacity(0.1)
+                        ? Colors.red
                         : hasAnomaly
-                            ? Colors.orange.withOpacity(0.1)
-                            : Colors.green.withOpacity(0.1),
-                    borderRadius: BorderRadius.circular(8),
-                    border: Border.all(
+                            ? Colors.orange
+                            : Colors.green,
+                    width: 1,
+                  ),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(
+                      hasError
+                          ? Icons.error
+                          : hasAnomaly
+                              ? Icons.warning
+                              : Icons.check_circle,
                       color: hasError
                           ? Colors.red
                           : hasAnomaly
                               ? Colors.orange
                               : Colors.green,
-                      width: 1,
+                      size: 28,
                     ),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                        hasError
-                            ? Icons.error
-                            : hasAnomaly
-                                ? Icons.warning
-                                : Icons.check_circle,
-                        color: hasError
-                            ? Colors.red
-                            : hasAnomaly
-                                ? Colors.orange
-                                : Colors.green,
-                      ),
-                      const SizedBox(width: 8),
-                      Expanded(
-                        child: Text(
-                          statusMessage,
-                          style: TextStyle(
-                            color: hasError
-                                ? Colors.red
-                                : hasAnomaly
-                                    ? Colors.orange
-                                    : Colors.green,
-                            fontWeight: FontWeight.bold,
-                          ),
-                          overflow: TextOverflow.ellipsis,
-                          textAlign: TextAlign.center,
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: Text(
+                        statusMessage,
+                        style: TextStyle(
+                          color: hasError
+                              ? Colors.red
+                              : hasAnomaly
+                                  ? Colors.orange
+                                  : Colors.green,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
                         ),
+                        overflow: TextOverflow.ellipsis,
+                        textAlign: TextAlign.center,
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
+              const SizedBox(height: 12),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.symmetric(vertical: 8.0),
                 child: RichText(
                   text: const TextSpan(
                     style: TextStyle(fontSize: 12, color: Colors.grey),
