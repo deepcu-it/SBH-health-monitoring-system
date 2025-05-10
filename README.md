@@ -51,18 +51,18 @@ SBH_health_monitoring_system/
 ## Mobile Application Screenshots
 
 ### Home Page
-![Home Page](images/Home_page.png)
+<img src="images/Home_page.png" alt="Home Page" width="250"/>
 
 ### History Tracking
-![History Tracking](images/History_tracking.png)
+<img src="images/History_tracking.png" alt="History Tracking" width="250"/>
 
 ### Nearby Hospital List
-![Nearby Hospital List](images/Nearby_hostpital_list.png)
+<img src="images/Nearby_hostpital_list.png" alt="Nearby Hospital List" width="250"/>
 
 ## Analytics Dashboard
 
 ### Graph of History Data
-![Graph of History Data](images/GraphOfHistoryData.png)
+<img src="images/GraphOfHistoryData.png" alt="Graph of History Data" width="250"/>
 
 ## Technology Stack
 
@@ -85,78 +85,3 @@ SBH_health_monitoring_system/
   - Firebase Console
   - Python 3.x
 
-## Getting Started
-
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/SBH_health_monitoring_system.git
-```
-
-2. Set up the mobile application:
-```bash
-cd health_monitor_copy
-flutter pub get
-```
-
-3. Set up the ML model:
-```bash
-cd AImodelForHealthMonitoring
-pip install -r requirements.txt
-python app.py
-```
-
-## Development Guidelines
-
-- Follow Flutter best practices and coding standards
-- Maintain proper documentation
-- Write unit tests for critical functionality
-- Use proper error handling and logging
-- Follow security best practices for handling sensitive health data
-- Ensure ML model versioning and documentation
-- Regular model retraining and validation
-
-## Security Considerations
-
-- All health data is encrypted in transit and at rest
-- Firebase security rules are properly configured
-- Regular security audits and updates
-- HIPAA compliance considerations for health data
-- Secure API key management
-- ML model input validation and sanitization
-- Secure model serving endpoints
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details
-
-## Support
-
-For support, please contact:
-- Email: [support@sbhhealth.com]
-- Issue Tracker: [GitHub Issues]
-
-## Acknowledgments
-
-- Flutter Team
-- Firebase Team
-- Scikit-learn and XGBoost Teams
-- All contributors to the project
-
-## Roadmap
-
-- [ ] Enhanced data visualization
-- [ ] Additional ML model features
-- [ ] Integration with wearable devices
-- [ ] Advanced analytics dashboard
-- [ ] Multi-language support
-- [ ] Model performance optimization
-- [ ] Real-time model updates
-- [ ] Additional health metrics monitoring 
