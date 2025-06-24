@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Super Nova Care Home & Hospital",
+    "address": "122A Hem Chandra Naskar Road, Jewish Graveyard Phool Bagan, Beleghata, Kolkata, West Bengal 700054",
+    "latitude": 22.5746,
+    "longitude": 88.3894
+  },
+  {
+    "name": "Apollo Hospital",
+    "address": "13A Hem Chandra Naskar Road, Subhas Sarobar Park, Phool Bagan, Beleghata, Kolkata, West Bengal 700010",
+    "latitude": 22.5741,
+    "longitude": 88.3898
+  },
+  {
+    "name": "Dr. B.C Roy Hospital",
+    "address": "Beleghata Main Road, Subhas Sarobar Park, Phool Bagan, Beleghata, Kolkata, West Bengal 700010",
+    "latitude": 22.5743,
+    "longitude": 88.3902
+  },
+  {
+    "name": "Divine Nursing Home & Hospital",
+    "address": "11A Abinash Chandra Banerjee Lane, Sura Cross Lane, Phool Bagan, Beleghata, Kolkata, West Bengal 700010",
+    "latitude": 22.5745,
+    "longitude": 88.3896
+  },
+  {
+    "name": "Dr. BC Roy Polio Hospital",
+    "address": "38 Badan Roy Lane, Subhas Sarobar Park, Phool Bagan, Beleghata, Kolkata, West Bengal 700010",
+    "latitude": 22.5742,
+    "longitude": 88.3900
+  },
+  {
+    "name": "Beleghata ID & BG Hospital",
+    "address": "D-5 Subhas Sarobar Park, Phool Bagan, Beleghata, Kolkata, West Bengal 700010",
+    "latitude": 22.5740,
+    "longitude": 88.3899
+  },
+  {
+    "name": "Liv Gastro Hospital",
+    "address": "39 R Suren Sarkar Road, behind ID Hospital, Subhas Sarobar Park, Phool Bagan, Beleghata, Kolkata, West Bengal 700010",
+    "latitude": 22.5747,
+    "longitude": 88.3897
+  },
+  {
+    "name": "Poorva Eye Care Hospital",
+    "address": "72 Ground Floor Hem Chandra Naskar Road, near Allahabad Bank, Subhas Sarobar Park, Phool Bagan, Beleghata, Kolkata, West Bengal 700010",
+    "latitude": 22.5748,
+    "longitude": 88.3895
+  },
+  {
+    "name": "Oasis Hospital",
+    "address": "108/1B Beleghata Main Road, Kulia, Beleghata, Kolkata, West Bengal 700010",
+    "latitude": 22.5749,
+    "longitude": 88.3893
+  },
+  {
+    "name": "R G Kar Medical College & Hospital",
+    "address": "Kundu Bagan, Beleghata, Kolkata, West Bengal 700085",
+    "latitude": 22.5750,
+    "longitude": 88.3891
+  },
+  {
+    "name": "Nil Ratan Sircar Medical College & Hospital",
+    "address": "138 Acharya Jagdish Chandra Bose Road, Sealdah, Raja Bazar, Kolkata, West Bengal 700014",
+    "latitude": 22.5720,
+    "longitude": 88.3639
+  },
+  {
+    "name": "Students Health Home & Hospital",
+    "address": "142/2 Acharya Jagdish Chandra Bose Road, Sealdah, Raja Bazar, Kolkata, West Bengal 700014",
+    "latitude": 22.5722,
+    "longitude": 88.3641
+  },
+  {
+    "name": "Dr. R Ahmed Dental College & Hospital",
+    "address": "114 Acharya Jagdish Chandra Bose Road, Maula Ali Crossing, Sealdah, Kolkata, West Bengal 700014",
+    "latitude": 22.5724,
+    "longitude": 88.3643
+  },
+  {
+    "name": "Calcutta National Medical College & Hospital",
+    "address": "32 Gorachand Road, Beniapukur, Kolkata, West Bengal 700014",
+    "latitude": 22.5726,
+    "longitude": 88.3645
+  },
+  {
+    "name": "Institute of Neurosciences Kolkata",
+    "address": "185 Acharya Jagdish Chandra Bose Road, Elgin, Kolkata, West Bengal 700017",
+    "latitude": 22.5728,
+    "longitude": 88.3647
+  },
+  {
+    "name": "Mercy Hospital",
+    "address": "125/1 Mother Teresa Sarani, Mullick Bazar, Park Street area, Kolkata, West Bengal 700017",
+    "latitude": 22.5730,
+    "longitude": 88.3649
+  },
+  {
+    "name": "Zephyr Hospital",
+    "address": "Plot No. 195, opposite Topsia, 1 New Park Street, Park Circus, Beniapukur, Kolkata, West Bengal 700017",
+    "latitude": 22.5732,
+    "longitude": 88.3651
+  },
+  {
+    "name": "ESI Hospital PGIMSR",
+    "address": "54 Bagmari Road, Kolkata, West Bengal 700054",
+    "latitude": 22.5734,
+    "longitude": 88.3653
+  },
+  {
+    "name": "Manicktala ESI Hospital Kolkata",
+    "address": "CIT Road, CIT Scheme VII M, Ghose Bagan, Kolkata, West Bengal 700054",
+    "latitude": 22.5736,
+    "longitude": 88.3655
+  },
+  {
+    "name": "Apollo Multispeciality Hospitals, Kolkata",
+    "address": "58 Canal Circular Road, Kadapara, Phool Bagan, Kankurgachi, Kolkata, West Bengal 700054",
+    "latitude": 22.5738,
+    "longitude": 88.3657
+  }
+] 
