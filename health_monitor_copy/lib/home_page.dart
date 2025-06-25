@@ -39,7 +39,8 @@ class _HomePageState extends State<HomePage> {
 
   String get _aiModelBaseUrl {
     if (Platform.isAndroid) {
-      return 'http://127.0.0.1:5000';
+      // Use 10.0.2.2 for Android emulator to access host machine
+      return 'http://10.0.2.2:5000';
     } else if (Platform.isIOS) {
       return 'http://localhost:5000';
     } else {
@@ -129,9 +130,9 @@ class _HomePageState extends State<HomePage> {
             final newHealthData = {
               'temperature':
                   double.tryParse(feed['field1']?.toString() ?? '37.5') ?? 37.5,
-              'heart_rate': double.tryParse(feed['field2']?.toString() ?? '0') ?? 0,
-              'spo2':
-                  double.tryParse(feed['field3']?.toString() ?? '0') ?? 0,
+              'heart_rate':
+                  double.tryParse(feed['field2']?.toString() ?? '0') ?? 0,
+              'spo2': double.tryParse(feed['field3']?.toString() ?? '0') ?? 0,
             };
 
             setState(() {
@@ -209,7 +210,7 @@ class _HomePageState extends State<HomePage> {
       final requestData = {
         'heart_rate': data['heart_rate'],
         'spo2': data['spo2'],
-        'temperature': 37.5, // Default temperature value
+        'temperature': data['temperature'], // Default temperature value
       };
 
       _logger.info('Sending data to AI model: $requestData');
