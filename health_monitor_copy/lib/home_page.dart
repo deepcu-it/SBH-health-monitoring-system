@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage> {
 
   String get _aiModelBaseUrl {
     if (Platform.isAndroid) {
-      return 'http://172.20.52.116:5000';
+      return 'http://127.0.0.1:5000';
     } else if (Platform.isIOS) {
       return 'http://localhost:5000';
     } else {
@@ -127,11 +127,11 @@ class _HomePageState extends State<HomePage> {
             _logger.info('Data received from ThingSpeak: $feed');
 
             final newHealthData = {
-              'heart_rate':
-                  double.tryParse(feed['field1']?.toString() ?? '0') ?? 0,
-              'spo2': double.tryParse(feed['field2']?.toString() ?? '0') ?? 0,
               'temperature':
-                  double.tryParse(feed['field3']?.toString() ?? '37.5') ?? 37.5,
+                  double.tryParse(feed['field1']?.toString() ?? '37.5') ?? 37.5,
+              'heart_rate': double.tryParse(feed['field2']?.toString() ?? '0') ?? 0,
+              'spo2':
+                  double.tryParse(feed['field3']?.toString() ?? '0') ?? 0,
             };
 
             setState(() {
@@ -144,9 +144,9 @@ class _HomePageState extends State<HomePage> {
                 0,
                 HealthData(
                   timestamp: DateTime.now(),
-                  heartRate: newHealthData['temperature'] as double,
+                  heartRate: newHealthData['heart_rate'] as double,
                   spo2: newHealthData['spo2'] as double,
-                  temperature: newHealthData['heart_rate'] as double,
+                  temperature: newHealthData['temperature'] as double,
                   hasAnomaly: hasAnomaly,
                 ));
             // Keep only last 100 records
