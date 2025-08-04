@@ -1,6 +1,6 @@
 # SBH Health Monitoring System
 
-A comprehensive health monitoring system developed for SBH (Smart Body Health) that enables users to track, monitor, and manage their health metrics in real-time.
+A comprehensive health monitoring system developed for SBH (Smart Bengal Hackathon) that enables users to track, monitor, and manage their health metrics in real-time.
 
 ![System Overview and Flow](images/Product-Flow-diagram.png)
 
